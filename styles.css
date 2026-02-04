@@ -2,8 +2,6 @@
   --bg0:#030712;
   --bg1:#04101b;
   --bg2:#061a2a;
-  --sea:#0b2a45;
-  --sea2:#0f3a5f;
 
   --text:#e7f2ff;
   --muted:#a6bfd8;
@@ -172,8 +170,8 @@ h1{
 }
 
 .card{
-  background: linear-gradient(180deg, rgba(10, 30, 50, 0.55), rgba(10, 30, 50, 0.35));
-  border: 1px solid rgba(170, 210, 255, 0.18);
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid var(--border);
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.25);
