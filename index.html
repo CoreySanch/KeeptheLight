@@ -3,234 +3,178 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Keep the Light — Survival Puzzle</title>
+  <title>Keep the Light - Lighthouse Terminal</title>
   <meta name="description" content="Keep the Light is a dark survival-puzzle game set in a remote lighthouse. Maintain the beacon, survive day by day, and endure nights swallowed by fog." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-  <rect x='38' y='40' width='24' height='45' fill='%2358b6ff'/>
-  <polygon points='35,40 65,40 50,18' fill='%237de0ff'/>
-  <rect x='44' y='55' width='12' height='30' fill='%23030612'/>
-  <circle cx='50' cy='28' r='6' fill='%23e7f2ff'/>
-</svg>">
-
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Cpath d='M50 10 68 88H32L50 10Z' fill='%23373737'/%3E%3Cpath d='M22 36h56L50 20 22 36Z' fill='%237d7d7d'/%3E%3Ccircle cx='50' cy='35' r='7' fill='%23d8d8d8'/%3E%3C/svg%3E" />
 </head>
 
 <body>
-  <div class="bg">
-    <div class="ocean-glow"></div>
-    <div class="fog fog-a"></div>
-    <div class="fog fog-b"></div>
-    <div class="grain"></div>
+  <div class="screen-fx" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
   </div>
 
-  <header class="topbar">
-    <a class="brand" href="#top">
-      <span class="brand-dot"></span>
-      <span class="brand-text">Keep the Light</span>
+  <header class="terminal-bar">
+    <a class="brand" href="#top" aria-label="Keep the Light home">
+      <span class="prompt">root@lighthouse:~$</span>
+      <span>keep_the_light</span>
     </a>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#media">Media</a>
-      <a href="#devlog">Devlog</a>
-      <a href="#contact">Contact</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#signal">signal</a>
+      <a href="#systems">systems</a>
+      <a href="#media">media</a>
+      <a href="#logs">logs</a>
+      <a href="#contact">contact</a>
     </nav>
   </header>
 
-  <main id="top" class="wrap">
-    <section class="hero">
-      <div class="hero-left">
-        <p class="kicker">Psychological • Survival • Puzzle</p>
-        <h1>Keep the light burning.<br/>Keep your mind intact.</h1>
-        <p class="sub">
-          A remote lighthouse in the early 1900s. Maintain the beacon, manage hunger and thirst,
-          and endure isolation as each day brings new demands — and darker nights.
-        </p>
-
-        <div class="cta-row">
-          <!-- Replace # with your Steam page later -->
-          <a class="btn primary" href="#" aria-label="Wishlist on Steam">Wishlist</a>
-          <a class="btn" href="#media">Watch Trailer</a>
-        </div>
-
-        <div class="pill-row">
-          <span class="pill">Unity</span>
-          <span class="pill">Singleplayer</span>
-          <span class="pill">Day-by-day</span>
-          <span class="pill">Fog + Day/Night</span>
-        </div>
+  <main id="top" class="terminal">
+    <section class="hero" aria-labelledby="site-title">
+      <div class="command-line" data-type>
+        <span class="prompt">keeper@station-03:~$</span>
+        <span>boot beacon_monitor --night-watch</span>
       </div>
 
-      <div class="hero-right">
-        <div class="card">
-          <div class="card-top">
-            <span class="card-title">Status</span>
-            <span class="badge">In Development</span>
-          </div>
+      <p class="status-line">connection: unstable / fog density: rising / keeper: alone</p>
 
-          <div class="stat-grid">
-            <div class="stat">
-              <div class="stat-label">Platforms</div>
-              <div class="stat-value">PC (TBD)</div>
-            </div>
-            <div class="stat">
-              <div class="stat-label">Release</div>
-              <div class="stat-value">TBD</div>
-            </div>
-            <div class="stat">
-              <div class="stat-label">Creator</div>
-              <div class="stat-value">Fantasy Dungeon</div>
-            </div>
-            <div class="stat">
-              <div class="stat-label">Contact</div>
-              <div class="stat-value"><a href="#contact">Email</a></div>
-            </div>
-          </div>
+      <h1 id="site-title">KEEP THE LIGHT</h1>
 
-          <div class="divider"></div>
-
-          <p class="micro">
-            Want updates? Follow the devlog and socials below.
-          </p>
-
-          <div class="mini-links">
-            <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">Twitch</a>
-            <a href="https://www.youtube.com/@fantasydungeon" target="_blank" rel="noreferrer">YouTube</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About the Game</h2>
-      <p class="lead">
-        <strong>Keep the Light</strong> is a dark survival-puzzle game where routine becomes a threat.
-        You’re alone, the fog thickens with night, and the lighthouse demands constant care.
-        Ignore the work and the light dies. Push through too long, and your mind starts to slip.
+      <p class="hero-copy">
+        A survival-puzzle game about maintaining a remote lighthouse, rationing what little you have,
+        and staying sane when the night starts answering back.
       </p>
 
-      <div class="feature-grid">
-        <div class="feature">
-          <h3>Hands-on lighthouse maintenance</h3>
-          <p>Fuel systems, cleaning, repairs, and tasks that feel physical and grounded.</p>
-        </div>
-        <div class="feature">
-          <h3>Survival pressure without a health bar</h3>
-          <p>Hunger and thirst force choices. You feel the consequences, not a UI meter.</p>
-        </div>
-        <div class="feature">
-          <h3>Insanity as a slow, eerie build</h3>
-          <p>Isolation and unsettling events raise tension—subtle at first, then undeniable.</p>
-        </div>
-        <div class="feature">
-          <h3>Day-by-day survival</h3>
-          <p>Plan your routine, conserve resources, and prepare for nights when the fog closes in.</p>
-        </div>
+      <div class="actions" aria-label="Primary actions">
+        <a class="terminal-button primary" href="#">wishlist</a>
+        <a class="terminal-button" href="#media">watch_trailer</a>
+      </div>
+
+      <div class="terminal-output" aria-label="Game status">
+        <div><span class="muted">platform</span> PC // TBD</div>
+        <div><span class="muted">status</span> in development</div>
+        <div><span class="muted">creator</span> Fantasy Dungeon</div>
+        <div><span class="muted">site</span> playfoggylighthouse.com</div>
       </div>
     </section>
 
-    <section id="media" class="section">
-      <h2>Trailer & Screenshots</h2>
-      <p class="muted">Drop your trailer link + screenshots later. This layout is ready.</p>
-
-      <div class="media-grid">
-        <div class="video card">
-          <div class="video-top">
-            <span class="card-title">Trailer</span>
-            <span class="muted small">(optional)</span>
-          </div>
-
-          <!-- Replace the iframe src with your YouTube trailer embed link -->
-          <div class="video-frame">
-            <iframe
-              title="Keep the Light Trailer"
-              src=""
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <div class="video-placeholder">
-              <div>
-                <div class="placeholder-title">Add your YouTube embed</div>
-                <div class="placeholder-sub">Paste the embed link into the iframe <code>src</code>.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery card">
-          <div class="card-top">
-            <span class="card-title">Screenshots</span>
-            <span class="muted small">4–8 recommended</span>
-          </div>
-          <div class="shots">
-            <div class="shot placeholder">Screenshot 1</div>
-            <div class="shot placeholder">Screenshot 2</div>
-            <div class="shot placeholder">Screenshot 3</div>
-            <div class="shot placeholder">Screenshot 4</div>
-          </div>
-          <p class="micro muted">
-            Replace these blocks with real images later
-          </p>
-        </div>
-      </div>
+    <section id="signal" class="block" aria-labelledby="signal-title">
+      <p class="command-line">
+        <span class="prompt">keeper@station-03:~$</span>
+        <span>cat signal.txt</span>
+      </p>
+      <h2 id="signal-title">signal acquired</h2>
+      <p>
+        You are the keeper of a lighthouse in the early 1900s. Every day is a routine:
+        check the fuel, clean the lens, make repairs, preserve your supplies. Every night
+        tests whether routine is enough.
+      </p>
+      <p>
+        The beacon must stay alive. Hunger and thirst make simple work harder. Isolation
+        bends the edges of the room. The fog keeps moving closer.
+      </p>
     </section>
 
-    <section id="devlog" class="section">
-      <h2>Devlog</h2>
-      <p class="muted">Check out Latest Posts</p>
+    <section id="systems" class="block" aria-labelledby="systems-title">
+      <p class="command-line">
+        <span class="prompt">keeper@station-03:~$</span>
+        <span>run diagnostics</span>
+      </p>
+      <h2 id="systems-title">active systems</h2>
 
-      <div class="posts">
-        <article class="post card">
-          <div class="post-meta">
-            <span class="badge soft">Update</span>
-            <span class="muted small">Feb 3, 2026</span>
-          </div>
-          <h3>Day-by-day system direction</h3>
-          <p>
-            The game is built around daily survival and routine — each day matters, and every night gets worse if you fall behind.
-          </p>
+      <div class="grid">
+        <article class="log-card">
+          <span class="index">01</span>
+          <h3>maintenance loop</h3>
+          <p>Fuel systems, lens cleaning, repairs, and physical tasks that make the lighthouse feel old, heavy, and necessary.</p>
         </article>
-
-        <article class="post card">
-          <div class="post-meta">
-            <span class="badge soft">Dev</span>
-            <span class="muted small">TBD</span>
-          </div>
-          <h3>Maintenance loop + fog nights</h3>
-          <p>
-            Building the daily routine: lighthouse tasks, survival systems, and the fog’s escalation through the night.
-          </p>
+        <article class="log-card">
+          <span class="index">02</span>
+          <h3>survival pressure</h3>
+          <p>Hunger and thirst force choices without turning the screen into a wall of meters.</p>
+        </article>
+        <article class="log-card">
+          <span class="index">03</span>
+          <h3>sanity drift</h3>
+          <p>Isolation starts subtle, then becomes impossible to ignore.</p>
+        </article>
+        <article class="log-card">
+          <span class="index">04</span>
+          <h3>day-by-day dread</h3>
+          <p>Plan in daylight. Survive the fog at night. Wake up and do it again if you can.</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="contact card">
-        <p class="lead">
-          For press, collabs, or playtesting: email me at <strong>cmitsanch@gmail.com</strong>.
-        </p>
+    <section id="media" class="block" aria-labelledby="media-title">
+      <p class="command-line">
+        <span class="prompt">keeper@station-03:~$</span>
+        <span>mount /media</span>
+      </p>
+      <h2 id="media-title">media archive</h2>
 
-        <a class="btn primary" href="mailto:cmitsanch@gmail.com">Email Me</a>
-
-        <div class="divider"></div>
-
-        <div class="contact-links">
-          <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">Twitch @FantasyDungeonX</a>
-          <a href="https://www.youtube.com/@fantasydungeon" target="_blank" rel="noreferrer">YouTube /@fantasydungeon</a>
+      <div class="media-shell">
+        <div class="video-frame">
+          <iframe
+            title="Keep the Light Trailer"
+            src=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div class="placeholder">
+            <span>NO TRAILER SIGNAL</span>
+            <small>paste a YouTube embed URL into the iframe src</small>
+          </div>
         </div>
 
-        <p class="micro muted">
-          © <span id="year"></span> Keep the Light • Built by Fantasy Dungeon
-        </p>
+        <div class="screenshot-list" aria-label="Screenshot placeholders">
+          <div class="shot">screenshot_01 pending</div>
+          <div class="shot">screenshot_02 pending</div>
+          <div class="shot">screenshot_03 pending</div>
+          <div class="shot">screenshot_04 pending</div>
+        </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <span class="muted small">beware the man who speaks in lies</span>
-    </footer>
+    <section id="logs" class="block" aria-labelledby="logs-title">
+      <p class="command-line">
+        <span class="prompt">keeper@station-03:~$</span>
+        <span>tail -f devlog</span>
+      </p>
+      <h2 id="logs-title">keeper logs</h2>
+
+      <div class="timeline">
+        <article class="entry">
+          <time datetime="2026-02-03">Feb 3, 2026</time>
+          <h3>day-by-day system direction</h3>
+          <p>The game is being built around daily survival and routine. Each day matters, and every night gets worse if you fall behind.</p>
+        </article>
+        <article class="entry">
+          <time>TBD</time>
+          <h3>maintenance loop + fog nights</h3>
+          <p>Building the daily routine: lighthouse tasks, survival systems, and the fog's escalation through the night.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="block contact" aria-labelledby="contact-title">
+      <p class="command-line">
+        <span class="prompt">keeper@station-03:~$</span>
+        <span>open comms</span>
+      </p>
+      <h2 id="contact-title">contact</h2>
+      <p>For press, collabs, or playtesting: <a href="mailto:cmitsanch@gmail.com">cmitsanch@gmail.com</a></p>
+      <div class="links">
+        <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">twitch://FantasyDungeonX</a>
+        <a href="https://www.youtube.com/@fantasydungeon" target="_blank" rel="noreferrer">youtube://fantasydungeon</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <span>copyright <span id="year"></span> // Keep the Light // beware the man who speaks in lies</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>
