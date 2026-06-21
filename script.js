@@ -16,27 +16,3 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
-
-const bootLine = document.querySelector("[data-type]");
-
-if (bootLine && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const text = bootLine.textContent.trim();
-  bootLine.setAttribute("aria-label", text);
-  bootLine.textContent = "";
-
-  let index = 0;
-  const cursor = document.createElement("span");
-  cursor.className = "cursor";
-  cursor.textContent = "_";
-  bootLine.append(cursor);
-
-  const type = () => {
-    if (index < text.length) {
-      cursor.before(text[index]);
-      index += 1;
-      window.setTimeout(type, 22);
-    }
-  };
-
-  window.setTimeout(type, 240);
-}

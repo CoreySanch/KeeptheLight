@@ -3,178 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Keep the Light - Lighthouse Terminal</title>
-  <meta name="description" content="Keep the Light is a dark survival-puzzle game set in a remote lighthouse. Maintain the beacon, survive day by day, and endure nights swallowed by fog." />
+  <title>Keep the Light</title>
+  <meta name="description" content="Keep the Light is a dark survival-puzzle game set in a remote lighthouse." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Cpath d='M50 10 68 88H32L50 10Z' fill='%23373737'/%3E%3Cpath d='M22 36h56L50 20 22 36Z' fill='%237d7d7d'/%3E%3Ccircle cx='50' cy='35' r='7' fill='%23d8d8d8'/%3E%3C/svg%3E" />
 </head>
 
 <body>
-  <div class="screen-fx" aria-hidden="true">
-    <div class="stars"></div>
-    <div class="scanlines"></div>
-    <div class="vignette"></div>
-  </div>
-
-  <header class="terminal-bar">
-    <a class="brand" href="#top" aria-label="Keep the Light home">
-      <span class="prompt">root@lighthouse:~$</span>
-      <span>keep_the_light</span>
-    </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#signal">signal</a>
-      <a href="#systems">systems</a>
-      <a href="#media">media</a>
-      <a href="#logs">logs</a>
-      <a href="#contact">contact</a>
-    </nav>
-  </header>
+  <div class="noise" aria-hidden="true"></div>
 
   <main id="top" class="terminal">
-    <section class="hero" aria-labelledby="site-title">
-      <div class="command-line" data-type>
-        <span class="prompt">keeper@station-03:~$</span>
-        <span>boot beacon_monitor --night-watch</span>
-      </div>
+    <section class="intro" aria-labelledby="title">
+      <p class="line dim">keeper terminal // station 03</p>
+      <h1 id="title">keepthelight.exe</h1>
 
-      <p class="status-line">connection: unstable / fog density: rising / keeper: alone</p>
-
-      <h1 id="site-title">KEEP THE LIGHT</h1>
-
-      <p class="hero-copy">
-        A survival-puzzle game about maintaining a remote lighthouse, rationing what little you have,
-        and staying sane when the night starts answering back.
+      <p>
+        is a dark survival-puzzle game about a remote lighthouse,
+        the work required to keep it alive, and what isolation does
+        after enough nights in the fog.
       </p>
 
-      <div class="actions" aria-label="Primary actions">
-        <a class="terminal-button primary" href="#">wishlist</a>
-        <a class="terminal-button" href="#media">watch_trailer</a>
-      </div>
+      <p>
+        maintain the beacon. ration food and water. clean the lens.
+        repair what breaks. do not let the light go out.
+      </p>
 
-      <div class="terminal-output" aria-label="Game status">
-        <div><span class="muted">platform</span> PC // TBD</div>
-        <div><span class="muted">status</span> in development</div>
-        <div><span class="muted">creator</span> Fantasy Dungeon</div>
-        <div><span class="muted">site</span> playfoggylighthouse.com</div>
-      </div>
+      <nav class="nav" aria-label="site navigation">
+        <a href="#about">about</a>
+        <a href="#systems">systems</a>
+        <a href="#media">media</a>
+        <a href="#logs">logs</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <p class="return-link">
+        <a href="#about">return</a>
+      </p>
     </section>
 
-    <section id="signal" class="block" aria-labelledby="signal-title">
-      <p class="command-line">
-        <span class="prompt">keeper@station-03:~$</span>
-        <span>cat signal.txt</span>
-      </p>
-      <h2 id="signal-title">signal acquired</h2>
+    <section id="about" class="block" aria-labelledby="about-title">
+      <p class="command">cat about.txt</p>
+      <h2 id="about-title">about</h2>
       <p>
-        You are the keeper of a lighthouse in the early 1900s. Every day is a routine:
-        check the fuel, clean the lens, make repairs, preserve your supplies. Every night
-        tests whether routine is enough.
+        You are alone in an early 1900s lighthouse. Daylight is for routine:
+        fuel, cleaning, repairs, supplies. Night is for finding out whether
+        routine was enough.
       </p>
       <p>
-        The beacon must stay alive. Hunger and thirst make simple work harder. Isolation
-        bends the edges of the room. The fog keeps moving closer.
+        The fog thickens after sunset. Hunger and thirst make simple tasks
+        feel heavier. The station begins to sound occupied.
       </p>
     </section>
 
     <section id="systems" class="block" aria-labelledby="systems-title">
-      <p class="command-line">
-        <span class="prompt">keeper@station-03:~$</span>
-        <span>run diagnostics</span>
-      </p>
-      <h2 id="systems-title">active systems</h2>
-
-      <div class="grid">
-        <article class="log-card">
-          <span class="index">01</span>
-          <h3>maintenance loop</h3>
-          <p>Fuel systems, lens cleaning, repairs, and physical tasks that make the lighthouse feel old, heavy, and necessary.</p>
-        </article>
-        <article class="log-card">
-          <span class="index">02</span>
-          <h3>survival pressure</h3>
-          <p>Hunger and thirst force choices without turning the screen into a wall of meters.</p>
-        </article>
-        <article class="log-card">
-          <span class="index">03</span>
-          <h3>sanity drift</h3>
-          <p>Isolation starts subtle, then becomes impossible to ignore.</p>
-        </article>
-        <article class="log-card">
-          <span class="index">04</span>
-          <h3>day-by-day dread</h3>
-          <p>Plan in daylight. Survive the fog at night. Wake up and do it again if you can.</p>
-        </article>
-      </div>
+      <p class="command">run diagnostics</p>
+      <h2 id="systems-title">systems</h2>
+      <ul>
+        <li>hands-on lighthouse maintenance</li>
+        <li>survival pressure without a screen full of meters</li>
+        <li>day-by-day planning and failure</li>
+        <li>fog, darkness, and sanity drift</li>
+      </ul>
     </section>
 
     <section id="media" class="block" aria-labelledby="media-title">
-      <p class="command-line">
-        <span class="prompt">keeper@station-03:~$</span>
-        <span>mount /media</span>
-      </p>
-      <h2 id="media-title">media archive</h2>
-
-      <div class="media-shell">
-        <div class="video-frame">
-          <iframe
-            title="Keep the Light Trailer"
-            src=""
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <div class="placeholder">
-            <span>NO TRAILER SIGNAL</span>
-            <small>paste a YouTube embed URL into the iframe src</small>
-          </div>
-        </div>
-
-        <div class="screenshot-list" aria-label="Screenshot placeholders">
-          <div class="shot">screenshot_01 pending</div>
-          <div class="shot">screenshot_02 pending</div>
-          <div class="shot">screenshot_03 pending</div>
-          <div class="shot">screenshot_04 pending</div>
-        </div>
-      </div>
+      <p class="command">list /media</p>
+      <h2 id="media-title">media</h2>
+      <p class="dim">trailer signal unavailable</p>
+      <p class="dim">screenshots pending</p>
     </section>
 
     <section id="logs" class="block" aria-labelledby="logs-title">
-      <p class="command-line">
-        <span class="prompt">keeper@station-03:~$</span>
-        <span>tail -f devlog</span>
+      <p class="command">tail devlog</p>
+      <h2 id="logs-title">logs</h2>
+      <p>
+        <span class="date">2026-02-03</span>
+        day-by-day survival direction: each day matters, and every night gets
+        worse if you fall behind.
       </p>
-      <h2 id="logs-title">keeper logs</h2>
-
-      <div class="timeline">
-        <article class="entry">
-          <time datetime="2026-02-03">Feb 3, 2026</time>
-          <h3>day-by-day system direction</h3>
-          <p>The game is being built around daily survival and routine. Each day matters, and every night gets worse if you fall behind.</p>
-        </article>
-        <article class="entry">
-          <time>TBD</time>
-          <h3>maintenance loop + fog nights</h3>
-          <p>Building the daily routine: lighthouse tasks, survival systems, and the fog's escalation through the night.</p>
-        </article>
-      </div>
+      <p>
+        <span class="date">tbd</span>
+        maintenance loop, lighthouse tasks, survival systems, and fog nights.
+      </p>
     </section>
 
-    <section id="contact" class="block contact" aria-labelledby="contact-title">
-      <p class="command-line">
-        <span class="prompt">keeper@station-03:~$</span>
-        <span>open comms</span>
-      </p>
+    <section id="contact" class="block" aria-labelledby="contact-title">
+      <p class="command">open comms</p>
       <h2 id="contact-title">contact</h2>
-      <p>For press, collabs, or playtesting: <a href="mailto:cmitsanch@gmail.com">cmitsanch@gmail.com</a></p>
-      <div class="links">
-        <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">twitch://FantasyDungeonX</a>
-        <a href="https://www.youtube.com/@fantasydungeon" target="_blank" rel="noreferrer">youtube://fantasydungeon</a>
-      </div>
+      <p>
+        email:
+        <a href="mailto:cmitsanch@gmail.com">cmitsanch@gmail.com</a>
+      </p>
+      <p>
+        <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">twitch</a>
+        /
+        <a href="https://www.youtube.com/@fantasydungeon" target="_blank" rel="noreferrer">youtube</a>
+      </p>
     </section>
-  </main>
 
-  <footer class="footer">
-    <span>copyright <span id="year"></span> // Keep the Light // beware the man who speaks in lies</span>
-  </footer>
+    <footer class="footer">
+      <p>copyright <span id="year"></span> // beware the man who speaks in lies</p>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
