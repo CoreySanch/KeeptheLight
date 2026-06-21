@@ -5,94 +5,90 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Keep the Light</title>
   <meta name="description" content="Keep the Light is a dark survival-puzzle game set in a remote lighthouse." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=terminal-4" />
 </head>
 
 <body>
-  <div class="noise" aria-hidden="true"></div>
+  <div class="crt" aria-hidden="true"></div>
 
-  <main id="top" class="terminal">
-    <section class="intro" aria-labelledby="title">
-      <p class="line dim">keeper terminal // station 03</p>
-      <h1 id="title">keepthelight.exe</h1>
+  <main id="top" class="screen">
+    <header class="boot">
+      <p>KTL BIOS 0.3 // station-03 // signal weak</p>
+      <p>phosphor display ready <span class="cursor">_</span></p>
+    </header>
 
-      <p>
-        is a dark survival-puzzle game about a remote lighthouse,
-        the work required to keep it alive, and what isolation does
-        after enough nights in the fog.
+    <section class="hero" aria-labelledby="title">
+      <p class="prompt">C:\KEEPER&gt; run keepthelight.exe</p>
+      <h1 id="title">KEEP THE LIGHT</h1>
+      <p class="tagline">survival puzzle / lighthouse maintenance / isolation horror</p>
+
+      <p class="copy">
+        A remote lighthouse. An old routine. A beacon that must not die.
+        Keep the station working through hunger, thirst, fog, and the sound
+        of something moving where no one should be.
       </p>
 
-      <p>
-        maintain the beacon. ration food and water. clean the lens.
-        repair what breaks. do not let the light go out.
-      </p>
-
-      <nav class="nav" aria-label="site navigation">
-        <a href="#about">about</a>
-        <a href="#systems">systems</a>
-        <a href="#media">media</a>
-        <a href="#logs">logs</a>
-        <a href="#contact">contact</a>
+      <nav class="menu" aria-label="site navigation">
+        <a href="#about">[1] about</a>
+        <a href="#systems">[2] systems</a>
+        <a href="#media">[3] media</a>
+        <a href="#logs">[4] logs</a>
+        <a href="#contact">[5] contact</a>
       </nav>
-
-      <p class="return-link">
-        <a href="#about">return</a>
-      </p>
     </section>
 
-    <section id="about" class="block" aria-labelledby="about-title">
-      <p class="command">cat about.txt</p>
+    <section id="about" class="panel" aria-labelledby="about-title">
+      <p class="prompt">C:\KEEPER&gt; type about.txt</p>
       <h2 id="about-title">about</h2>
       <p>
-        You are alone in an early 1900s lighthouse. Daylight is for routine:
-        fuel, cleaning, repairs, supplies. Night is for finding out whether
-        routine was enough.
+        You are alone in an early 1900s lighthouse. Daylight is for checking
+        fuel, cleaning the lens, repairing old machinery, and counting supplies.
+        Night is for finding out whether the work was enough.
       </p>
       <p>
-        The fog thickens after sunset. Hunger and thirst make simple tasks
-        feel heavier. The station begins to sound occupied.
+        The fog thickens after sunset. Hunger and thirst make simple tasks feel
+        heavier. The station begins to sound occupied.
       </p>
     </section>
 
-    <section id="systems" class="block" aria-labelledby="systems-title">
-      <p class="command">run diagnostics</p>
+    <section id="systems" class="panel" aria-labelledby="systems-title">
+      <p class="prompt">C:\KEEPER&gt; scan systems</p>
       <h2 id="systems-title">systems</h2>
-      <ul>
-        <li>hands-on lighthouse maintenance</li>
-        <li>survival pressure without a screen full of meters</li>
-        <li>day-by-day planning and failure</li>
-        <li>fog, darkness, and sanity drift</li>
-      </ul>
+      <div class="system-list">
+        <p><span>01</span> hands-on lighthouse maintenance</p>
+        <p><span>02</span> survival pressure without a screen full of meters</p>
+        <p><span>03</span> day-by-day planning and failure</p>
+        <p><span>04</span> fog, darkness, and sanity drift</p>
+      </div>
     </section>
 
-    <section id="media" class="block" aria-labelledby="media-title">
-      <p class="command">list /media</p>
+    <section id="media" class="panel" aria-labelledby="media-title">
+      <p class="prompt">C:\KEEPER&gt; dir media</p>
       <h2 id="media-title">media</h2>
-      <p class="dim">trailer signal unavailable</p>
-      <p class="dim">screenshots pending</p>
+      <div class="file-list">
+        <p>TRAILER.BIN <span>missing signal</span></p>
+        <p>SCREEN01.RAW <span>pending</span></p>
+        <p>SCREEN02.RAW <span>pending</span></p>
+      </div>
     </section>
 
-    <section id="logs" class="block" aria-labelledby="logs-title">
-      <p class="command">tail devlog</p>
+    <section id="logs" class="panel" aria-labelledby="logs-title">
+      <p class="prompt">C:\KEEPER&gt; tail devlog.sys</p>
       <h2 id="logs-title">logs</h2>
-      <p>
-        <span class="date">2026-02-03</span>
-        day-by-day survival direction: each day matters, and every night gets
-        worse if you fall behind.
-      </p>
-      <p>
-        <span class="date">tbd</span>
-        maintenance loop, lighthouse tasks, survival systems, and fog nights.
-      </p>
+      <article class="log">
+        <time datetime="2026-02-03">2026.02.03</time>
+        <p>day-by-day survival direction: each day matters, and every night gets worse if you fall behind.</p>
+      </article>
+      <article class="log">
+        <time>tbd</time>
+        <p>maintenance loop, lighthouse tasks, survival systems, and fog nights.</p>
+      </article>
     </section>
 
-    <section id="contact" class="block" aria-labelledby="contact-title">
-      <p class="command">open comms</p>
+    <section id="contact" class="panel" aria-labelledby="contact-title">
+      <p class="prompt">C:\KEEPER&gt; open comms</p>
       <h2 id="contact-title">contact</h2>
-      <p>
-        email:
-        <a href="mailto:cmitsanch@gmail.com">cmitsanch@gmail.com</a>
-      </p>
+      <p>email <a href="mailto:cmitsanch@gmail.com">cmitsanch@gmail.com</a></p>
       <p>
         <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">twitch</a>
         /
@@ -101,10 +97,11 @@
     </section>
 
     <footer class="footer">
-      <p>copyright <span id="year"></span> // beware the man who speaks in lies</p>
+      <p>KEEP THE LIGHT // <span id="year"></span> // beware the man who speaks in lies</p>
+      <p><a href="#top">return to prompt</a></p>
     </footer>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=terminal-4"></script>
 </body>
 </html>
