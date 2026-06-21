@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Keep the Light</title>
   <meta name="description" content="Keep the Light is a dark survival-puzzle game set in a remote lighthouse." />
-  <link rel="stylesheet" href="styles.css?v=terminal-6" />
+  <link rel="stylesheet" href="styles.css?v=terminal-7" />
 </head>
 
 <body>
@@ -25,7 +25,7 @@
       <p class="copy">
         A remote lighthouse. An old routine. A beacon that must not die.
         Keep the station working through hunger, thirst, fog, and the sound
-        of something repeating your name through dead wire.
+        of something repeating <span class="redact" tabindex="0">your name</span> through dead wire.
       </p>
 
       <nav class="menu" aria-label="site navigation">
@@ -43,12 +43,13 @@
       <p>
         You are alone in an old lighthouse. Daylight is for checking fuel,
         cleaning the lens, repairing machinery, and counting supplies.
-        Night is for finding out whether the work was enough.
+        Night is for finding out whether the work was enough, or whether the
+        thing below the floor has learned <span class="redact" tabindex="0">the keeper's route</span>.
       </p>
       <p>
         The fog thickens after sunset. Hunger and thirst make simple tasks feel
         heavier. The station records movement in locked rooms. The recordings
-        always stop before the knock.
+        always stop before <span class="redact broken" tabindex="0">the third knock</span>.
       </p>
     </section>
 
@@ -57,9 +58,9 @@
       <h2 id="systems-title">systems</h2>
       <div class="system-list">
         <p><span>A</span> lantern rotation manual override</p>
-        <p><span>B</span> ration ledger with missing pages</p>
+        <p><span>B</span> ration ledger with <span class="redact" tabindex="0">one page written twice</span></p>
         <p><span>C</span> stairwell audio loop / not from microphone</p>
-        <p><span>D</span> mirror check fails after lights-out</p>
+        <p><span>D</span> mirror check fails after <span class="redact" tabindex="0">lantern blackout</span></p>
         <p><span>E</span> unknown signal source below station floor</p>
       </div>
     </section>
@@ -69,9 +70,9 @@
       <h2 id="media-title">media</h2>
       <div class="file-list">
         <p>LANTERN.BIN <span>corrupted header</span></p>
-        <p>GLASS.RAW <span>keeper absent from reflection</span></p>
-        <p>WIRE.WAV <span>breathing detected after shutdown</span></p>
-        <p>FLOOR.MAP <span>one room larger inside than outside</span></p>
+        <p>GLASS.RAW <span>keeper absent from <span class="redact" tabindex="0">all reflections</span></span></p>
+        <p>WIRE.WAV <span>breathing detected after <span class="redact" tabindex="0">power loss</span></span></p>
+        <p>FLOOR.MAP <span>one room larger <span class="redact broken" tabindex="0">inside than outside</span></span></p>
       </div>
     </section>
 
@@ -80,19 +81,19 @@
       <h2 id="logs-title">logs</h2>
       <article class="log">
         <time>entry a</time>
-        <p>the lamp went out. the sea kept shining.</p>
+        <p>the lamp went out. the sea kept <span class="redact" tabindex="0">shining upward</span>.</p>
       </article>
       <article class="log">
         <time>entry b</time>
-        <p>fog entered stairwell. no open doors found.</p>
+        <p>fog entered stairwell. no open doors found. hinges wet on <span class="redact" tabindex="0">both sides</span>.</p>
       </article>
       <article class="log">
         <time>entry c</time>
-        <p>second lantern signal offshore. no vessel. no island. no light.</p>
+        <p>second lantern signal offshore. no vessel. no island. no <span class="redact" tabindex="0">shoreline</span>.</p>
       </article>
       <article class="log">
         <time>entry d</time>
-        <p>the return prompt changed before anyone touched the keys.</p>
+        <p>the return prompt changed before anyone touched the keys: <span class="redact broken" tabindex="0">C:\BELOW&gt;</span></p>
       </article>
     </section>
 
@@ -100,9 +101,9 @@
       <p class="prompt">C:\KEEPER&gt; open comms</p>
       <h2 id="comms-title">comms</h2>
       <div class="file-list">
-        <p>RADIO.OUT <span>no reply</span></p>
-        <p>WIRE.LINE <span>cut beneath floorboards</span></p>
-        <p>LAST.MSG <span>do not answer if it knocks twice</span></p>
+        <p>RADIO.OUT <span>no reply / carrier tone says <span class="redact" tabindex="0">stay awake</span></span></p>
+        <p>WIRE.LINE <span>cut beneath floorboards / still <span class="redact" tabindex="0">warm</span></span></p>
+        <p>LAST.MSG <span>do not answer if it knocks <span class="redact broken" tabindex="0">from inside the lens</span></span></p>
       </div>
     </section>
 
@@ -112,6 +113,6 @@
     </footer>
   </main>
 
-  <script src="script.js?v=terminal-6"></script>
+  <script src="script.js?v=terminal-7"></script>
 </body>
 </html>

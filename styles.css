@@ -40,6 +40,12 @@ body::selection {
   background: var(--strong);
 }
 
+.redact::selection {
+  color: var(--strong);
+  background: rgba(199, 168, 97, 0.28);
+  text-shadow: none;
+}
+
 .crt {
   position: fixed;
   inset: 0;
@@ -151,6 +157,48 @@ a:focus-visible {
   max-width: 62ch;
   color: var(--text);
   font-size: 16px;
+}
+
+.redact {
+  position: relative;
+  color: transparent;
+  text-shadow: 0 0 7px rgba(159, 184, 159, 0.34);
+  background:
+    linear-gradient(90deg, rgba(159, 184, 159, 0.1), rgba(199, 168, 97, 0.16)),
+    repeating-linear-gradient(90deg, transparent 0 8px, rgba(2, 4, 2, 0.8) 8px 11px);
+  border-bottom: 1px solid rgba(199, 168, 97, 0.28);
+  outline: 0;
+  cursor: text;
+}
+
+.redact::before {
+  content: "";
+  position: absolute;
+  inset: -1px 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(2, 4, 2, 0.88) 0 4px,
+    transparent 4px 9px
+  );
+  opacity: 0.52;
+  pointer-events: none;
+}
+
+.redact:hover,
+.redact:focus-visible {
+  color: rgba(213, 230, 208, 0.45);
+  text-shadow: 0 0 10px rgba(213, 230, 208, 0.22);
+}
+
+.redact:hover::before,
+.redact:focus-visible::before {
+  opacity: 0.18;
+}
+
+.redact.broken {
+  background:
+    linear-gradient(90deg, rgba(199, 168, 97, 0.08), rgba(159, 184, 159, 0.12)),
+    repeating-linear-gradient(90deg, rgba(2, 4, 2, 0.92) 0 6px, transparent 6px 10px);
 }
 
 .menu {
