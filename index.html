@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Keep the Light</title>
   <meta name="description" content="Keep the Light is a dark survival-puzzle game set in a remote lighthouse." />
-  <link rel="stylesheet" href="styles.css?v=terminal-4" />
+  <link rel="stylesheet" href="styles.css?v=terminal-5" />
 </head>
 
 <body>
@@ -13,19 +13,19 @@
 
   <main id="top" class="screen">
     <header class="boot">
-      <p>KTL BIOS 0.3 // station-03 // signal weak</p>
-      <p>phosphor display ready <span class="cursor">_</span></p>
+      <p>KTL BIOS 0.3 // station-03 // keeper unknown</p>
+      <p>signal recovered from damaged tape <span class="cursor">_</span></p>
     </header>
 
     <section class="hero" aria-labelledby="title">
       <p class="prompt">C:\KEEPER&gt; run keepthelight.exe</p>
       <h1 id="title">KEEP THE LIGHT</h1>
-      <p class="tagline">survival puzzle / lighthouse maintenance / isolation horror</p>
+      <p class="tagline">survival puzzle / lighthouse maintenance / unidentified presence</p>
 
       <p class="copy">
         A remote lighthouse. An old routine. A beacon that must not die.
         Keep the station working through hunger, thirst, fog, and the sound
-        of something moving where no one should be.
+        of something learning your footsteps.
       </p>
 
       <nav class="menu" aria-label="site navigation">
@@ -33,7 +33,7 @@
         <a href="#systems">[2] systems</a>
         <a href="#media">[3] media</a>
         <a href="#logs">[4] logs</a>
-        <a href="#contact">[5] contact</a>
+        <a href="#comms">[5] comms</a>
       </nav>
     </section>
 
@@ -43,11 +43,12 @@
       <p>
         You are alone in an early 1900s lighthouse. Daylight is for checking
         fuel, cleaning the lens, repairing old machinery, and counting supplies.
-        Night is for finding out whether the work was enough.
+        Night is for finding out whether the work was enough, and whether the
+        voice below the lantern room is really yours.
       </p>
       <p>
         The fog thickens after sunset. Hunger and thirst make simple tasks feel
-        heavier. The station begins to sound occupied.
+        heavier. The station records movement in locked rooms.
       </p>
     </section>
 
@@ -59,49 +60,54 @@
         <p><span>02</span> survival pressure without a screen full of meters</p>
         <p><span>03</span> day-by-day planning and failure</p>
         <p><span>04</span> fog, darkness, and sanity drift</p>
+        <p><span>05</span> unknown signal source below station floor</p>
       </div>
     </section>
 
     <section id="media" class="panel" aria-labelledby="media-title">
-      <p class="prompt">C:\KEEPER&gt; dir media</p>
+      <p class="prompt">C:\KEEPER&gt; dir /a media</p>
       <h2 id="media-title">media</h2>
       <div class="file-list">
-        <p>TRAILER.BIN <span>missing signal</span></p>
-        <p>SCREEN01.RAW <span>pending</span></p>
-        <p>SCREEN02.RAW <span>pending</span></p>
+        <p>TRAILER.BIN <span>corrupted header</span></p>
+        <p>SCREEN01.RAW <span>black frame / lantern visible</span></p>
+        <p>SCREEN02.RAW <span>keeper absent from reflection</span></p>
+        <p>AUDIO.LOG <span>breathing detected after shutdown</span></p>
       </div>
     </section>
 
     <section id="logs" class="panel" aria-labelledby="logs-title">
-      <p class="prompt">C:\KEEPER&gt; tail devlog.sys</p>
+      <p class="prompt">C:\KEEPER&gt; tail keeper.log</p>
       <h2 id="logs-title">logs</h2>
       <article class="log">
-        <time datetime="2026-02-03">2026.02.03</time>
-        <p>day-by-day survival direction: each day matters, and every night gets worse if you fall behind.</p>
+        <time>XXXX.02.03</time>
+        <p>day-by-day survival direction: each day matters. every night remembers what you failed to finish.</p>
       </article>
       <article class="log">
-        <time>tbd</time>
-        <p>maintenance loop, lighthouse tasks, survival systems, and fog nights.</p>
+        <time>XXXX.02.04</time>
+        <p>maintenance loop stable. fog entered stairwell at 02:17. no open doors found.</p>
+      </article>
+      <article class="log">
+        <time>XXXX.02.05</time>
+        <p>keeper reported second lantern signal offshore. station charts show no vessel, no island, no light.</p>
       </article>
     </section>
 
-    <section id="contact" class="panel" aria-labelledby="contact-title">
+    <section id="comms" class="panel" aria-labelledby="comms-title">
       <p class="prompt">C:\KEEPER&gt; open comms</p>
-      <h2 id="contact-title">contact</h2>
-      <p>email <a href="mailto:cmitsanch@gmail.com">cmitsanch@gmail.com</a></p>
-      <p>
-        <a href="https://twitch.tv/FantasyDungeonX" target="_blank" rel="noreferrer">twitch</a>
-        /
-        <a href="https://www.youtube.com/@fantasydungeon" target="_blank" rel="noreferrer">youtube</a>
-      </p>
+      <h2 id="comms-title">comms</h2>
+      <div class="file-list">
+        <p>RADIO.OUT <span>no reply</span></p>
+        <p>WIRE.LINE <span>cut beneath floorboards</span></p>
+        <p>LAST.MSG <span>do not answer if it knocks twice</span></p>
+      </div>
     </section>
 
     <footer class="footer">
-      <p>KEEP THE LIGHT // <span id="year"></span> // beware the man who speaks in lies</p>
+      <p>KEEP THE LIGHT // XXXX // beware the man who speaks in lies</p>
       <p><a href="#top">return to prompt</a></p>
     </footer>
   </main>
 
-  <script src="script.js?v=terminal-4"></script>
+  <script src="script.js?v=terminal-5"></script>
 </body>
 </html>
